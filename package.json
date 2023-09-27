@@ -8,7 +8,7 @@
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
-    "appUUID": "c9af7f17-8783-4998-8dc2-fe4afc2d2acf",
+    "appUUID": "8a289e6b-42c3-41d8-ba80-0eef1e70fc80",
     "appType": "app",
     "appDisplayName": "Tennis Tracker",
     "iconFile": "resources/logo.png",
