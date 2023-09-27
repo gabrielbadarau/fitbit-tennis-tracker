@@ -1,0 +1,615 @@
+<svg>
+  <rect id="app" width="100%" height="100%" x="0" y="0" fill="teal" />
+
+  <!-- Home Screen -->
+  <svg id="home-screen">
+
+    <!-- Home Title -->
+    <text x="26%" y="35%" font-family="System-Bold" fill="white" font-size="30">
+      Tennis Tracker
+    </text>
+    <image x="13%" y="27%" width="30" height="30" href="logo.png" />
+
+    <!-- Right Top Button -->
+    <use id="btn-home-tr" href="#combo-button-upper-right" fill="teal">
+      <set href="combo-button-icon" attributeName="href" to="settings-filled.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="settings.png"/>
+    </use>
+
+    <!-- Left Top Button -->
+    <use id="btn-home-tl" href="#combo-button-upper-left" fill="teal">
+      <set href="combo-button-icon" attributeName="href" to="opponent-filled.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="opponent.png"/>
+    </use>
+
+    <!-- Start Button -->
+    <use id="btn-home-start" height="75" width="150" href="#square-button-icon" y="45%" x="25%" fill="white">
+      <set href="#text" attributeName="text-buffer" to="Start" />
+      <set href="#text" attributeName="font-size" to="25" />
+      <set href="#text" attributeName="text-anchor" to="start" />
+      <set href="#text" attributeName="id" to="txt-home-start" />
+      <set href="#image" attributeName="href" to="start.png" />
+      <set href="#image" attributeName="id" to="img-home-start" />
+    </use>
+
+    <!-- History Button -->
+     <use id="btn-home-history" height="75" width="150" href="#square-button-icon" y="72%" x="25%" fill="white">
+      <set href="#text" attributeName="text-buffer" to="History" />
+      <set href="#text" attributeName="font-size" to="25" />
+      <set href="#text" attributeName="id" to="txt-home-history" />
+      <set href="#image" attributeName="href" to="history.png" />
+      <set href="#image" attributeName="id" to="img-home-history" />
+    </use>
+  </svg>
+
+  <!-- Choose Opponent Screen -->
+  <svg id="opponent-screen" display="none">
+
+    <!-- Left Top Button -->
+    <use id="btn-opponent-tl" href="#combo-button-upper-left" fill="teal">
+      <set href="combo-button-icon" attributeName="href" to="back-filled.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="back.png"/>
+    </use>
+
+    <!-- Header -->
+    <textarea y="23%" font-family="System-Regular" fill="white" font-size="30" text-anchor="middle">
+      Tap to change opponent
+    </textarea>
+
+    <!-- Opponent Name Button -->
+    <use id="btn-opponent-name" href="#square-button" x="5%" y="50%" fill="white" width="274" height="80" fill="white">
+      <set href="#text" attributeName="text-buffer" to="Opponent" />
+      <set href="#text" attributeName="text-length" to="20" />
+      <set href="#text" attributeName="font-family" to="System-Bold" />
+      <set href="#text" attributeName="font-size" to="40" />
+      <set href="#text" attributeName="id" to="txt-opponent-name" />
+    </use>
+  </svg>
+
+  <!-- Settings Screen -->
+  <svg id="settings-screen" display="none">
+
+    <!-- Left Top Button -->
+    <use id="btn-settings-tl" href="#combo-button-upper-left" fill="teal">
+      <set href="combo-button-icon" attributeName="href" to="back-filled.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="back.png"/>
+    </use>
+
+    <!-- Header -->
+    <textarea y="23%" font-family="System-Regular" fill="white" font-size="30" text-anchor="middle">
+      Tap to change format
+    </textarea>
+
+    <!-- Settings Format Button -->
+    <use id="btn-settings-format" href="#square-button" x="5%" y="50%" fill="white" width="274" height="80" fill="white">
+      <set href="#text" attributeName="text-buffer" to="Classic " />
+      <set href="#text" attributeName="font-family" to="System-Bold" />
+      <set href="#text" attributeName="font-size" to="40" />
+      <set href="#text" attributeName="id" to="txt-settings-format" />
+    </use>
+  </svg>
+
+  <!-- First Server Screen -->
+  <svg id="first-server-screen" display="none">
+
+    <!-- Header -->
+    <textarea y="19%" font-family="System-Regular" fill="white" font-size="30" text-anchor="middle">
+      Select first server
+    </textarea>
+
+    <!-- Me Server Button -->
+    <use id="btn-server-me" href="#square-button" x="11%" y="42%" fill="white" width="100" height="100" fill="white">
+      <set href="#text" attributeName="text-buffer" to="ME" />
+      <set href="#text" attributeName="font-family" to="System-Bold" />
+      <set href="#text" attributeName="font-size" to="40" />
+      <set href="#text" attributeName="id" to="txt-server-me" />
+    </use>
+
+    <text x="22%" y="84%" font-family="System-Regular" fill="white" font-size="25" >
+      Me
+    </text>
+
+    <!-- Opponent Server Button -->
+    <use id="btn-server-opponent" href="#square-button" x="56%" y="42%" fill="white" width="100" height="100" fill="white">
+      <set href="#text" attributeName="text-buffer" to="OP" />
+      <set href="#text" attributeName="font-family" to="System-Bold" />
+      <set href="#text" attributeName="font-size" to="40" />
+      <set href="#text" attributeName="id" to="txt-server-opponent" />
+    </use>
+
+    <text x="72%" y="84%" font-family="System-Regular" fill="white" font-size="25" text-anchor="middle" id="txt-server-opponent-footer">
+      Opponent
+    </text>
+  </svg>
+
+  <!-- Playing Screen -->
+  <svg id="playing-screen" display="none">
+
+    <use id="panorama-container" href="#panoramaview">
+
+      <use id="item1" href="#panoramaview-item">
+        <rect id="panorama2" width="100%" height="100%" fill="teal" />
+
+        <text x="40%" y="24%" font-family="System-Regular" fill="white" font-size="25" >
+          Break points
+        </text>
+
+        <!-- Opponent -->
+        <text id="txt-play-opponent-2" x="5%" y="40%" font-family="System-Bold" fill="white" font-size="40" >
+          OP
+        </text>
+
+        <text
+          id="txt-play-converted-breakpoints-opponent"
+          x="49%" y="40%"
+          font-family="System-Regular"
+          fill="white"
+          font-size="40"
+          text-length="2"
+          text-anchor="middle"
+        >
+          0
+        </text>
+
+        <text x="60%" y="40%" font-family="System-Regular" fill="white" font-size="40" text-anchor="middle">
+          /
+        </text>
+
+        <text
+          id="txt-play-total-breakpoints-opponent"
+          x="72%"
+          y="40%"
+          font-family="System-Regular"
+          fill="white"
+          font-size="40"
+          text-length="2"
+          text-anchor="middle"
+        >
+          0
+        </text>
+
+        <!-- Me -->
+        <text id="txt-play-me" x="5%" y="55%" font-family="System-Bold" fill="white" font-size="40" >
+          ME
+        </text>
+
+        <text
+          id="txt-play-converted-breakpoints-me"
+          x="49%" y="55%"
+          font-family="System-Regular"
+          fill="white"
+          font-size="40"
+          text-length="2"
+          text-anchor="middle"
+        >
+          0
+        </text>
+
+        <text x="60%" y="55%" font-family="System-Regular" fill="white" font-size="40" text-anchor="middle">
+          /
+        </text>
+
+        <text
+          id="txt-play-total-breakpoints-me"
+          x="72%"
+          y="55%"
+          font-family="System-Regular"
+          fill="white"
+          font-size="40"
+          text-length="2"
+          text-anchor="middle"
+        >
+          0
+        </text>
+
+        <!-- Distance -->
+        <image x="6%" y="63%" width="35" height="35" href="distance.png" />
+
+        <text
+          id="txt-play-distance"
+          x="30%"
+          y="73%"
+          font-family="System-Regular"
+          fill="white"
+          font-size="33"
+          text-length="5"
+          text-anchor="middle"
+        >
+          0.00
+        </text>
+
+        <text
+          x="48%"
+          y="73%"
+          font-family="System-Regular"
+          fill="white"
+          font-size="33"
+          text-length="2"
+          text-anchor="middle"
+        >
+          km
+        </text>
+
+        <!-- Calories -->
+        <image x="60%" y="63%" width="35" height="35" href="fire.png" />
+
+        <text
+          id="txt-play-calories"
+          x="84%"
+          y="73%"
+          font-family="System-Regular"
+          fill="white"
+          font-size="33"
+          text-length="5"
+          text-anchor="middle"
+        >
+          0
+        </text>
+      </use>
+
+      <use id="item2" href="#panoramaview-item" height="100%">
+        <rect id="panorama1" width="100%" height="100%" fill="teal" />
+
+        <!-- Opponent -->
+        <text id="txt-play-opponent" x="5%" y="32%" font-family="System-Bold" fill="white" font-size="40" >
+          OP
+        </text>
+
+        <image display="none" id="circle-playing-opponent" x="25%" y="24%" width="23" height="23" href="tennis-ball.png" />
+
+        <text
+         id="txt-play-games-opponent-1"
+         x="5%"
+         y="44%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8">
+          0
+        </text>
+
+        <text
+         id="txt-play-games-opponent-2"
+         x="15%"
+         y="44%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8"
+         display="none"
+        >
+          0
+        </text>
+
+        <text
+         id="txt-play-games-opponent-3"
+         x="25%"
+         y="44%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8"
+         display="none"
+        >
+          0
+        </text>
+
+        <text
+         id="txt-play-games-opponent-4"
+         x="35%"
+         y="44%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8"
+         display="none"
+        >
+          0
+        </text>
+
+        <text
+         id="txt-play-games-opponent-5"
+         x="45%"
+         y="44%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8"
+         display="none"
+        >
+          0
+        </text>
+
+        <use
+          id="btn-score-opponent"
+          href="#square-button"
+          x="59%"
+          y="20%"
+          fill="white"
+          width="120"
+          height="85"
+          fill="white"
+          pointer-events="visible"
+        >
+          <set href="#text" attributeName="text-buffer" to="0" />
+          <set href="#text" attributeName="font-family" to="System-Bold" />
+          <set href="#text" attributeName="font-size" to="60" />
+          <set href="#text" attributeName="id" to="txt-score-opponent" />
+        </use>
+
+        <!-- Me -->
+        <text id="txt-play-me" x="5%" y="67%" font-family="System-Bold" fill="white" font-size="40" >
+          ME
+        </text>
+
+        <image display="none" id="circle-playing-me" x="25%" y="59%" width="23" height="23" href="tennis-ball.png" />
+
+        <text
+         id="txt-play-games-me-1"
+         x="5%"
+         y="79%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8">
+          0
+        </text>
+
+        <text
+         id="txt-play-games-me-2"
+         x="15%"
+         y="79%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8"
+         display="none"
+        >
+          0
+        </text>
+
+        <text
+         id="txt-play-games-me-3"
+         x="25%"
+         y="79%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8"
+         display="none"
+        >
+          0
+        </text>
+
+        <text
+         id="txt-play-games-me-4"
+         x="35%"
+         y="79%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8"
+         display="none"
+        >
+          0
+        </text>
+
+        <text
+         id="txt-play-games-me-5"
+         x="45%"
+         y="79%"
+         font-family="System-Regular"
+         fill="white" font-size="36"
+         text-anchor="start"
+         text-length="8"
+         display="none"
+        >
+          0
+        </text>
+
+        <use
+          id="btn-score-me"
+          href="#square-button"
+          x="59%"
+          y="54%"
+          fill="white"
+          width="120"
+          height="85"
+          fill="white"
+          pointer-events="visible"
+        >
+          <set href="#text" attributeName="text-buffer" to="0" />
+          <set href="#text" attributeName="font-family" to="System-Bold" />
+          <set href="#text" attributeName="font-size" to="60" />
+          <set href="#text" attributeName="id" to="txt-score-me" />
+        </use>
+      </use>
+
+      <!-- Left Top Button -->
+      <use id="btn-playing-tl" href="#combo-button-upper-left" fill="teal">
+        <set href="combo-button-icon" attributeName="href" to="back-filled.png"/>
+        <set href="combo-button-icon-press" attributeName="href" to="back.png"/>
+      </use>
+
+      <!-- Clock Right Side -->
+      <text id="myClock" x="88%" y="12%" fill="white" font-size="25" font-family="System-Regular" text-anchor="middle">
+        00:00
+      </text>
+
+      <!-- Divider -->
+      <rect y="84%" width="100%" height="2" fill="white" />
+
+      <!-- Button Switch Sides -->
+      <use
+        id="btn-switch-sides"
+        href="#push-button"
+        y="84%" fill="white"
+        height="47"
+        display="none"
+        pointer-events="visible"
+        fill-opacity="1"
+      >
+        <set href="#text"  attributeName="text-buffer" to="Switch sides" />
+        <set href="#text" attributeName="fill" to="teal" />
+        <set href="#text" attributeName="y" to="30%" />
+        <set href="#text"  attributeName="id" to="txt-switch-sides" />
+      </use>
+
+      <!-- Finish Left Button -->
+      <use
+        x="0%"
+        y="85%"
+        id="btn-playing-bl"
+        href="#square-button-icon"
+        fill="teal"
+        height="52"
+        width="80"
+        pointer-events="visible"
+      >
+        <set href="#image" attributeName="href" to="finish-filled.png" />
+      </use>
+
+      <!-- Timer -->
+      <image x="45%" y="87%" width="30" height="30" href="timer.png" id="img-play-timer" />
+      <text
+        x="56%"
+        y="95%"
+        id="txt-play-timer"
+        font-family="System-Regular"
+        fill="white"
+        font-size="26"
+        text-anchor="start"
+        text-length="8">
+        0'
+      </text>
+
+      <!-- Heart Rate -->
+      <image x="74%" y="87%" width="30" height="30" href="heart.png" id="img-heart-rate"/>
+      <text
+        x="85%"
+        y="95%"
+        id="txt-play-heart-rate"
+        font-family="System-Regular"
+        fill="white"
+        font-size="26"
+        text-anchor="start"
+        text-length="8">
+        --
+      </text>
+
+      <use id="pagination-dots" href="#pagination-widget" y="8">
+        <use href="#pagination-dot" />
+        <use href="#pagination-dot" />
+        <use href="#pagination-dot" />
+        <use href="#pagination-dot" />
+        <use href="#pagination-dot" />
+        <use href="#pagination-highlight-dot" />
+      </use>
+    </use>
+  </svg>
+
+  <!-- Popup exit -->
+  <svg id="popup-exit" display="none">
+
+    <!-- Title and text -->
+    <use href="#mixed-text-center-mid" class="dialog-mixed-text" fill="white">
+      <set href="#top-padding" attributeName="display" to="none" />
+      <set href="#header/text" attributeName="text-buffer" to="Are you sure?" />
+      <set href="#copy/text" attributeName="text-buffer" to="You have unsaved activity." />
+      <set href="#bottom-padding" attributeName="display" to="none" />
+    </use>
+
+    <!-- Left button -->
+    <use id="btn-popup-left" class="dialog-half-button-left" href="#square-button" fill="white">
+      <set href="#text" attributeName="text-buffer" to="No" />
+      <set href="#text" attributeName="text-anchor" to="middle" />
+      <set href="#text" attributeName="id" to="txt-popup-left" />
+    </use>
+
+    <!-- Right button -->
+    <use id="btn-popup-right" class="dialog-half-button-right" href="#square-button" fill="white">
+      <set href="#text" attributeName="text-buffer" to="Yes" />
+      <set href="#text" attributeName="text-anchor" to="middle" />
+      <set href="#text" attributeName="id" to="txt-popup-right" />
+    </use>
+  </svg>
+
+  <!-- History Screen -->
+  <svg id="history-screen" display="none">
+
+    <!-- Left Top Button -->
+    <use id="btn-history-tl" href="#combo-button-upper-left" fill="teal">
+      <set href="combo-button-icon" attributeName="href" to="back-filled.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="back.png"/>
+    </use>
+
+    <!-- Header -->
+    <textarea x="20%" y="4%" font-family="System-Bold" fill="white" font-size="35" text-anchor="middle" width="240">
+      Match History
+    </textarea>
+
+    <!-- List History Matches -->
+    <use id="btn-first-history-match" href="#push-button" y="65" height="45" fill="white" font-family="System-Regular" font-size="30">
+      <set href="#text" attributeName="text-buffer" to="" />
+      <set href="#text" attributeName="fill" to="teal" />
+      <set href="#text" attributeName="y" to="12" />
+      <set href="#text" attributeName="text-length" to="30" />
+      <set href="#text" attributeName="id" to="txt-first-history-match" />
+    </use>
+
+    <text
+      id="txt-score-first-history-match"
+      x="155"
+      y="136"
+      font-family="System-Regular"
+      fill="white"
+      font-size="28"
+      text-anchor="middle"
+      text-length="30"
+    >
+
+    </text>
+
+    <use id="btn-second-history-match" href="#push-button" y="145" height="45" fill="white" font-family="System-Regular" font-size="30">
+      <set href="#text" attributeName="text-buffer" to="" />
+      <set href="#text" attributeName="fill" to="teal" />
+      <set href="#text" attributeName="y" to="12" />
+      <set href="#text" attributeName="text-length" to="30" />
+      <set href="#text" attributeName="id" to="txt-second-history-match" />
+    </use>
+
+    <text
+      id="txt-score-second-history-match"
+      x="155"
+      y="216"
+      font-family="System-Regular"
+      fill="white"
+      font-size="28"
+      text-anchor="middle"
+      text-length="30"
+    >
+
+    </text>
+
+    <use id="btn-third-history-match" href="#push-button" y="225" height="45" fill="white" font-family="System-Regular" font-size="30">
+      <set href="#text" attributeName="text-buffer" to="" />
+      <set href="#text" attributeName="fill" to="teal" />
+      <set href="#text" attributeName="y" to="12" />
+      <set href="#text" attributeName="text-length" to="30" />
+      <set href="#text" attributeName="id" to="txt-third-history-match" />
+    </use>
+
+    <text
+      id="txt-score-third-history-match"
+      x="155"
+      y="296"
+      font-family="System-Regular"
+      fill="white"
+      font-size="28"
+      text-anchor="middle"
+      text-length="30"
+    >
+
+    </text>
+  </svg>
+</svg>
