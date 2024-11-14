@@ -1,5 +1,9 @@
 # Fitbit Tennis Tracker App
-Fitbit App created for Versa 2 Watch to keep track of score while playing tennis
+Fitbit App created for Versa 2 Watch to keep track of score while playing tennis.
+Published, but as of 2024, fibit closed the gallery for third party apps.
+
+![image](https://github.com/user-attachments/assets/55ae024b-d616-4373-9d77-8f5b366a236b)
+
 
 ## Demo 
 You can check this app in the Fitbit App Galery here: https://gallery.fitbit.com/details/8a289e6b-42c3-41d8-ba80-0eef1e70fc80.
